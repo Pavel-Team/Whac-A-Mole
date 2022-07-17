@@ -10,6 +10,9 @@
         android:name="ru.cpt.android.whac_a_mole.ui.screen.MenuFragment"
         android:label="@string/title_menu"
         tools:layout="@layout/fragment_menu">
+        <action
+            android:id="@+id/action_fragment_menu_to_fragment_game"
+            app:destination="@id/fragment_game" />
     </fragment>
 
     <fragment
@@ -17,6 +20,11 @@
         android:name="ru.cpt.android.whac_a_mole.ui.screen.GameFragment"
         android:label="@string/title_game"
         tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_fragment_game_to_fragment_result_game"
+            app:destination="@id/fragment_result_game"
+            app:popUpTo="@id/fragment_menu"
+            app:popUpToInclusive="true"/>
     </fragment>
 
     <fragment
@@ -24,6 +32,10 @@
         android:name="ru.cpt.android.whac_a_mole.ui.screen.ResultGameFragment"
         android:label="@string/title_result_game"
         tools:layout="@layout/fragment_result_game">
+
+<!--        <argument-->
+<!--            android:name="countClick"-->
+<!--            android:defaultValue="0" />-->
     </fragment>
 
 </navigation>
