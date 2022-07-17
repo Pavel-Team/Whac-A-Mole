@@ -85,13 +85,17 @@ class GameFragment: Fragment() {
     }
 
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-
-        //Если фрагмент уничтожается ПРИ ЛЮБЫХ ОБСТОЯТЕЛЬСТВАХ, все равно сохраняем результат
-        val scoreUser = viewModel.getScore().value
+    override fun onStop() {
+        super.onStop()
+        //Если фрагмент скрывается ПРИ ЛЮБЫХ ОБСТОЯТЕЛЬСТВАХ, все равно сохраняем результат
+        val scoreUser = gameView?.getScore()?.value
         if (scoreUser!=null && ApplicationPreferences.getScore(requireContext()) < scoreUser)
             ApplicationPreferences.setScore(requireContext(), scoreUser)
+    }
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
 
         //Избавляемся от утечек + останавливаем таймер
         gameView = null
