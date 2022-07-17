@@ -75,7 +75,10 @@ class GameFragment: Fragment() {
 
                 override fun onFinish() {
                     viewModel.initNewGame() //Сброс состояния игры
-                    findNavController().navigate(R.id.action_fragment_game_to_fragment_result_game)
+
+                    val action = GameFragmentDirections.actionFragmentGameToFragmentResultGame()
+                    action.countClick = gameView?.getScore()?.value!!
+                    findNavController().navigate(action)
                 }
             }
         timerGame.start()

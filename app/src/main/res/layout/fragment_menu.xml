@@ -1,31 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:gravity="center">
 
     <TextView
+        android:id="@+id/text_view_title_app"
+        style="@style/titleAppTextViewStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Can you catch the mole?"/>
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/margin_top_title_app_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/app_name"/>
 
     <TextView
+        android:id="@+id/text_view_rules"
+        style="@style/textTextViewStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SCORE:"/>
+        app:layout_constraintTop_toBottomOf="@id/text_view_title_app"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/rules"/>
+
+    <TextView
+        android:id="@+id/text_view_title_score"
+        style="@style/textTextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_rules"
+        app:layout_constraintBottom_toTopOf="@id/button_menu_play"
+        android:text="@string/score"
+        android:textSize="@dimen/font_size_score"/>
 
     <TextView
         android:id="@+id/text_view_menu_score"
+        style="@style/titleTextViewStyle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_title_score"
+        android:textSize="@dimen/font_size_score_menu" />
 
     <Button
         android:id="@+id/button_menu_play"
+        style="@style/buttonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_title_app"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/play"/>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Styles-->
+    <dimen name="font_size_default_title">36sp</dimen>
+    <dimen name="font_size_default_text">14sp</dimen>
+    <dimen name="font_size_default_button">20sp</dimen>
+
+    <dimen name="margin_window">16dp</dimen>
+    <dimen name="margin_between_horizontal_text_view">5dp</dimen>
+
+    <dimen name="radius_button">10dp</dimen>
+    <dimen name="min_height_button">10dp</dimen>
+    <dimen name="padding_top_button">7dp</dimen>
+    <dimen name="padding_bottom_button">8dp</dimen>
+    <dimen name="padding_start_end_button">32dp</dimen>
+    <dimen name="stroke_white_button">1dp</dimen>
+
+    <!--SplashScreen-->
+    <dimen name="width_icon_splash_screen">200dp</dimen>
+
+    <!--MenuFragment-->
+    <dimen name="margin_top_title_app_menu">40dp</dimen>
+    <dimen name="font_size_score">24sp</dimen>
+    <dimen name="font_size_score_menu">26sp</dimen>
+
+    <!--GameFragment-->
+    <dimen name="font_size_text_view_in_game">24sp</dimen>
+
+    <!--ResultGameFragment-->
+    <dimen name="font_size_text_view_result">30sp</dimen>
+    <dimen name="margin_top_buttons_result_game">15dp</dimen>
+</resources>

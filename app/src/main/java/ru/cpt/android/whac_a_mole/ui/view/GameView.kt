@@ -24,7 +24,6 @@ class GameView(context: Context, attrs: AttributeSet): View(context, attrs) {
 
     private var widthCell: Int = 0 //Ширина одной клетки поля
     private val paint: Paint = Paint()
-    private val myMatrix: Matrix = Matrix()
 
     private val bitmapCell: Bitmap = BitmapFactory.decodeResource(resources, R.drawable.cell)
     private val bitmapMole: Bitmap = BitmapFactory.decodeResource(resources, R.drawable.mole)

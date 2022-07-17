@@ -33,9 +33,19 @@
         android:label="@string/title_result_game"
         tools:layout="@layout/fragment_result_game">
 
-<!--        <argument-->
-<!--            android:name="countClick"-->
-<!--            android:defaultValue="0" />-->
+        <argument
+            android:name="countClick"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_fragment_result_game_to_fragment_menu"
+            app:destination="@id/fragment_menu"
+            app:popUpTo="@id/fragment_result_game"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_fragment_result_game_to_fragment_game"
+            app:destination="@id/fragment_game"
+            app:popUpTo="@id/fragment_result_game"
+            app:popUpToInclusive="true"/>
     </fragment>
 
 </navigation>

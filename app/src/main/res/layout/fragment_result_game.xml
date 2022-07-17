@@ -12,14 +12,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
+            style="@style/textTextViewStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="You hit:"/>
+            android:text="@string/you_hit"
+            android:textSize="@dimen/font_size_text_view_result"/>
 
         <TextView
+            style="@style/titleTextViewStyle"
             android:id="@+id/text_view_hit"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_between_horizontal_text_view"
+            android:textSize="@dimen/font_size_text_view_result"/>
 
     </LinearLayout>
 
@@ -28,27 +33,36 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
+            style="@style/textTextViewStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="You score:"/>
+            android:text="@string/you_score"
+            android:textSize="@dimen/font_size_text_view_result"/>
 
         <TextView
+            style="@style/titleTextViewStyle"
             android:id="@+id/text_view_score"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_between_horizontal_text_view"
+            android:textSize="@dimen/font_size_text_view_result" />
 
     </LinearLayout>
 
     <Button
         android:id="@+id/button_replay"
+        style="@style/buttonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play"/>
+        android:text="@string/play"
+        android:layout_marginTop="@dimen/margin_top_buttons_result_game"/>
 
     <Button
         android:id="@+id/button_menu"
+        style="@style/buttonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Menu"/>
+        android:text="@string/menu"
+        android:layout_marginTop="@dimen/margin_top_buttons_result_game"/>
 
 </LinearLayout>

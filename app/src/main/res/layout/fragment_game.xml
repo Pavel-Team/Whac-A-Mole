@@ -6,38 +6,53 @@
 
     <TextView
         android:id="@+id/title_score"
+        style="@style/textTextViewStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="Score:"/>
+        android:text="@string/score_game"
+        android:layout_marginStart="@dimen/margin_window"
+        android:layout_marginTop="@dimen/margin_window"
+        android:textSize="@dimen/font_size_text_view_in_game"/>
 
     <TextView
         android:id="@+id/score"
+        style="@style/titleTextViewStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@id/title_score"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="@id/title_score"
+        android:layout_marginStart="@dimen/margin_between_horizontal_text_view"
+        android:textSize="@dimen/font_size_text_view_in_game"/>
 
     <TextView
         android:id="@+id/title_timer"
+        style="@style/textTextViewStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toStartOf="@id/time"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Time:"/>
+        app:layout_constraintTop_toTopOf="@id/time"
+        android:layout_marginEnd="@dimen/margin_between_horizontal_text_view"
+        android:text="@string/time_game"
+        android:textSize="@dimen/font_size_text_view_in_game"/>
 
     <TextView
         android:id="@+id/time"
+        style="@style/titleTextViewStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="@dimen/margin_window"
+        android:layout_marginTop="@dimen/margin_window"
+        android:textSize="@dimen/font_size_text_view_in_game"/>
 
     <ru.cpt.android.whac_a_mole.ui.view.GameView
         android:id="@+id/game_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/title_score"/>
+        app:layout_constraintTop_toBottomOf="@id/title_score"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

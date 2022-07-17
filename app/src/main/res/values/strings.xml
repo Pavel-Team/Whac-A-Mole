@@ -1,7 +1,23 @@
 <resources>
     <string name="app_name">Whac-A-Mole</string>
 
+    <!--Navigation-->
     <string name="title_menu">Menu</string>
     <string name="title_game">Game</string>
     <string name="title_result_game">Result game</string>
+
+    <!--MenuFragment-->
+    <string name="rules">Can you catch the mole?</string>
+    <string name="score">Score</string>
+    <string name="play">Play</string>
+
+    <!--GameFragment-->
+    <string name="score_game">Score:</string>
+    <string name="time_game">Time:</string>
+
+    <!--ResultGameFragment-->
+    <string name="you_hit">You hit:</string>
+    <string name="you_score">Your best score:</string>
+    <string name="menu">Menu</string>
+
 </resources>
